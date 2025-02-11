@@ -1,0 +1,28 @@
+# Importing the random library
+import random
+
+# The `random` module is a built-in Python library that provides functions
+# for generating random numbers. When we import `random`, the interpreter
+# loads the module and makes its functions available for use in our code.
+
+# ASCII of dice
+dieList = [
+    "+-------+\n|       |\n|   o   |\n|       |\n+-------+",
+    "+-------+\n| o     |\n|       |\n|     o |\n+-------+",
+    "+-------+\n| o     |\n|   o   |\n|     o |\n+-------+",
+    "+-------+\n| o   o |\n|       |\n| o   o |\n+-------+",
+    "+-------+\n| o   o |\n|   o   |\n| o   o |\n+-------+",
+    "+-------+\n| o   o |\n| o   o |\n| o   o |\n+-------+"
+]
+
+# Assigning a random number 1 to 6
+def numberGen():
+    number = random.randint(1, 6)
+    dieAssignment(number)
+
+def dieAssignment(number):
+    print(dieList[number - 1])
+# Rolling the die 100 times
+for i in range(100):
+    numberGen()
+
